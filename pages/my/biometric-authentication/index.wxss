@@ -1,0 +1,7 @@
+page {
+  /* background: var(--page_bg_gray); */
+  padding: 32rpx;
+}
+button {
+  margin-top: 36rpx;
+}

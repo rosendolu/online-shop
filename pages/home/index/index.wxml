@@ -1,0 +1,70 @@
+<wxs module="filter" src="../../../utils/filter.wxs"></wxs>
+<!-- <view class="bg">
+  <vanimage  use-loading-slot lazy-load fit="cover" width="100%" lazy-load height="288rpx" src="{{bannerList[0]['url']}}">
+    <vanloading slot="loading" type="spinner" size="20" vertical />
+  </vanimage>
+</view> -->
+<wenavigation bind:clickLeft="clickLeft" back="{{false}}" title="FANFAN857" background='rgba(255,255,255,{{1}})'>
+  <!-- <weicon slot='left'  icon="search" color="black"></weicon> -->
+  <!-- <text slot="left">logo</text> -->
+</wenavigation>
+
+<swiper next-margin="48rpx" previous-margin="48rpx"  class="swiper" bindchange="swiperChange" current="{{swiperIndex}}" indicator-dots="{{false}}" autoplay="{{false}}" circular="{{true}}" interval="{{3000}}" duration="{{500}}" >
+  <block wx:for="{{bannerList}}" wx:key="id">
+    <swiper-item class="swiper_item" >
+      <view class="item_box {{swiperIndex === index?'swiper_active':''}} ">
+        <image class="item_item "  bind:tap="clickBanner" data-index="{{index}}"  mode="aspectFill" src="{{filter.ossImgCompress(item.url)}}"/>
+        <!-- <vanimage bind:click="clickBanner" radius='8rpx' use-loading-slot lazy-load fit="cover" width="166rpx" lazy-load height="166rpx" src="{{item.src}}">
+          <vanloading slot="loading" type="spinner" size="20" vertical />
+        </vanimage> -->
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <vansticky>
+  <wesearchbar></wesearchbar>
+</vansticky> -->
+<!-- <view class="hot">
+  <scroll-view scroll-x  scroll-with-animation="{{true}}">
+      <view class="scroll_box">
+        <block wx:for="{{bannerList}}" wx:key="hash">
+          <view  bindtap="handleTabClick" data-index="{{index}}">
+            <view class="scroll_el" >
+              <vanimage  radius='8rpx' use-loading-slot lazy-load fit="cover" width="166rpx" lazy-load height="166rpx" src="{{item.src}}">
+                <vanloading slot="loading" type="spinner" size="20" vertical />
+              </vanimage>
+              <view class="scroll_el_txt">{{item.hash}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+</view> -->
+<view class="hotsale">
+    <view class="title_box" >
+      <view class="title_box_pri">热销推荐</view>
+      <view class="title_box_vice">/HOT SALE</view>
+      <view class="title_box_more" bind:tap="jumpSort">更多</view>
+    </view>
+    <view class="hotsale_body">
+      <block wx:for="{{list}}" wx:key='id'>
+        <c-card item="{{item}}"></c-card>
+      </block>
+    </view>
+</view>
+<!-- <view class="recommend">
+  <view class="title_box">
+    <view class="title_box_pri">人气推荐</view>
+    <view class="title_box_vice">/RECOMMEND</view>
+    <view class="title_box_more" bind:tap="jumpSort">更多</view>
+  </view>
+  <view class="recomend_body">
+    <block wx:for="{{bannerList}}" wx:key="hash">
+      <r-card item="{{item}}"></r-card>
+    </block>
+  </view>
+</view> -->
+<!-- <vanimage use-loading-slot lazy-load fit="cover" width="750rpx" lazy-load height="200px"  src='https://images.pexels.com/photos/1004665/pexels-photo-1004665.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'>
+  <vanloading slot="loading" type="spinner" size="20" vertical />
+</vanimage> -->
+<!-- <vansearch readonly value="{{inputVal}}" shape="round" background="#fff" placeholder="请输入搜索关键词"/> -->

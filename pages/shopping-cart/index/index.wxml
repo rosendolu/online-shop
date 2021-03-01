@@ -1,0 +1,40 @@
+<wxs src="../../../utils/filter.wxs" module="filter"></wxs>
+<wenavigation title="购物车"></wenavigation>
+<view class="body">
+  <block wx:if="{{list.length}}">
+    <view class="list">
+      <block wx:for="{{list}}" wx:key="buyHash" >
+        <view class="item">
+          <mp-slideview data-index='{{index}}' buttons="{{slideButtons}}"  bindbuttontap="slideButtonTap">
+            <view class="box">
+              <van-checkbox custom-class='checkbox' value="{{item.selected}}" bind:change='selectItem' data-index="{{index}}" icon-size="20px" checked-color="#ee0a24"  />
+              <vanimage  radius='8rpx' use-loading-slot lazy-load fit="cover" width="166rpx" custom-class='center'  height="166rpx" src="{{filter.ossImgCompress(item.goods.poster,166,166)}}">
+                <vanloading slot="loading" type="spinner" size="20" vertical />
+              </vanimage>
+              <!-- <image class="center"  mode="aspectFill" src="{{filter.ossImgCompress(item.goods.poster,166,166)}}"></image> -->
+              <view class="right">
+                <view class="title overflow-word-line1">{{item.goods.title}}</view>
+                <!-- <view class="skuname">{{item.skuname || 'fsdfsf'}}</view> -->
+                <van-tag type="warning">{{item.skuname || ''}}</van-tag>
+                <view class="price"><text>¥<text style="font-size:36rpx">{{item.goods.price}}</text></text> <van-stepper input-width="22px" button-size="22px" min="1" integer max="{{item.goods.total}}" value="{{item.count}}" data-index='{{index}}' bind:change="numchange" /></view>
+              </view>
+            </view>
+          </mp-slideview>
+
+        </view>
+      </block>
+    </view>
+    <view class="h200"></view>
+    <van-submit-bar
+      price="{{totalMoney}}"
+      button-text="去结算"
+      loading="{{loading}}"
+      tip="{{showTips?'至少选择一件物品才能结算':false}}"
+      bind:submit="onSubmit">
+      <van-checkbox  value="{{selectedAll}}" bind:change='selectAll' icon-size="20px" checked-color="#ee0a24">全选</van-checkbox>
+    </van-submit-bar>
+  </block>
+  <view class="empty" wx:else>
+    <van-empty  image="error" image="/static/empty.png" description="请先添加商品到购物车！" />
+  </view>
+</view>

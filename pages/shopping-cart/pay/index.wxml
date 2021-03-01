@@ -1,0 +1,57 @@
+<wxs src="../../../utils/filter.wxs" module="filter"></wxs>
+<wenavigation title="确认订单"></wenavigation>
+<view class="row">
+  <picker  mode="selector" bindchange="bindPickerChange" bindcancel='pickerCancel' value="{{index}}" range="{{barList}}">
+    <view class="el selector {{validate=== 'barName'?'tip':''}}" >
+      <weicon  type='field' icon='location' size='{{28}}' color='gray'></weicon>
+      <view class="addr center">收货地址</view>
+      <view  class="addr_bar right">{{index>=0?barList[index]:'请选择所在酒吧'}}</view>
+      <weicon  icon='arrow' size='{{14}}' color='rgba(0,0,0,.5)'></weicon>
+    </view>
+  </picker>
+  <view class="el info">
+    <image class='info_icon' src="/static/icon/call.png" />
+    <input class="info_phone center {{validate=== 'phone'?'tip':''}}" value="{{phone}}" bindinput="syncInput" data-key='phone' type="number" placeholder="收货人联系方式" />
+    <!-- <view class="info_addr">卡座：</view> -->
+    <input value="{{seat}}" class="info_name {{validate=== 'seat'?'tip':''}}" bindinput="syncInput" data-key='seat' type="text" placeholder="请填写卡座名称：" />
+  </view>
+  <view class="fan_code">
+    <view class="form">
+      <!-- <mp-cells> -->
+      <!-- <mp-cell  value=''>
+          <view slot='footer' class="a">{{15868282384)}}</view>
+        </mp-cell> -->
+      <mp-cell value='优惠码'>
+        <input slot='footer' type="number" placeholder="请输入范码" value="{{fanCode}}"  bindinput="syncInput" data-key='fanCode'/>
+      </mp-cell>
+      <!-- <mp-cell  value='备注'>
+          <input slot='footer' type="text"  placeholder="请输入备注"  value="{{msg}}"/>
+        </mp-cell> -->
+      <!-- </mp-cells> -->
+    </view>
+  </view>
+</view>
+<view class="list">
+  <block wx:for="{{list}}" wx:key="buyHash">
+    <view class="item">
+      <!-- <image class="poster" src="{{filter.ossImgCompress(item.goods.poster,166,166)}}" /> -->
+      <vanimage  radius='8rpx' use-loading-slot lazy-load fit="cover" width="166rpx"   height="166rpx" src="{{filter.ossImgCompress(item.goods.poster,166,166)}}">
+        <vanloading slot="loading" type="spinner" size="20" vertical />
+      </vanimage>
+      <view class="right">
+        <view class="title overflow-word-line1">{{item.goods.title}}</view>
+          <van-tag type="warning">{{item.goods.skuname || ''}}</van-tag>
+        <view class="price">
+          <text>¥<text style="font-size:36rpx">{{item.goods.price}}</text></text>
+          <view style="color:rgba(0,0,0,0.5)">x{{item.count}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="msgbox flex">
+  <view class="left">备注</view>
+  <textarea class="right"  type="text" maxlength="80" placeholder="跑腿业务必须填写该项（80字以内）" value="{{msg}}" bindinput="syncInput" data-key='msg'></textarea>
+</view>
+<view class="h100"></view>
+<van-submit-bar loading='{{loading}}' price="{{sum}}" button-text="提交订单" bind:submit="onSubmit" />

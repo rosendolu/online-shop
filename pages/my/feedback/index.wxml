@@ -1,0 +1,9 @@
+<wenavigation title="意见反馈"></wenavigation>
+<view class="body">
+  <view class="input_box">
+    <textarea class="input" maxlength='{{200}}' bindinput="input" bindblur='blur' auto-height="{{true}}" placeholder="请输入您的宝贵意见"></textarea>
+    <view class="len">{{inputVal.length}}/200</view>
+  </view>
+  <button class="button" type="primary"  bind:tap="submit"> 提交 </button>
+  <button class="button" open-type="contact">联系客服</button>
+</view>

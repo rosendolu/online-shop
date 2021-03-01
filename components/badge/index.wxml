@@ -1,0 +1,2 @@
+<wxs src="../../utils/filter.wxs" module="filter"></wxs>
+<view class="weui-badge {{extClass}} {{!content ? 'weui-badge_dot' : ''}}">{{filter.moreThan99(content)}}</view>

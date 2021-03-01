@@ -1,0 +1,114 @@
+page {
+  background: #f2f2f2;
+}
+.row {
+  border-radius: 16rpx;
+}
+.addr .weui-cell__ft {
+  text-align: left;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.list .item {
+  padding: 16rpx;
+  background: #fff;
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+}
+.list .poster {
+  width: 166rpx;
+  height: 166rpx;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+  background: rgba(153, 153, 153, 0.644);
+}
+.list .right {
+  flex: 1;
+  padding-left: 16rpx;
+}
+.list .right .title {
+  font-size: 36rpx;
+  color: #333;
+  text-align: left;
+  overflow: hidden;
+}
+.list .right .price {
+  font-size: 32rpx;
+  /* padding: 16rpx 0; */
+  color: #fd593b;
+  display: flex;
+  justify-content: space-between;
+}
+.selector {
+  color: #333;
+}
+.selector .addr_bar {
+  color: #000;
+}
+.el .center {
+  width: 300rpx;
+  overflow: hidden;
+}
+.el .right {
+  flex: 1;
+}
+.el {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 32rpx;
+  font-size: 28rpx;
+  color: #333;
+  background: #fff;
+  margin-top: 16rpx;
+}
+.selector:active {
+  background: var(--btn_bg_hover);
+}
+.info {
+  color: #000;
+}
+.info .info_icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 12rpx;
+  margin-right: 4rpx;
+}
+
+.h100 {
+  height: 100rpx;
+}
+.fan_code {
+  margin-top: 16rpx;
+  background: #fff;
+}
+/* color: rgba(0, 0, 0, 0.1); */
+/* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+.weui-cell__ft {
+  overflow: hidden;
+}
+.weui-cell .weui-cell__ft_in-access {
+  padding-right: 0;
+}
+/* .addr .weui-cell {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+} */
+.tip {
+  outline: 1px solid red;
+}
+.msgbox {
+  background: #fff;
+  margin-top: 16rpx;
+  padding: 32rpx;
+  font-size: 28rpx;
+}
+.msgbox .left {
+  width: 100rpx;
+}
+.msgbox .right {
+  flex: 1;
+  height: 150rpx;
+}

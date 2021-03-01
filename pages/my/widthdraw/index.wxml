@@ -1,0 +1,12 @@
+<!-- <wenavigation title="提现"></wenavigation> -->
+<view class="body">
+  <view class="title">提现至微信零钱</view>
+  <view class="money">提现金额</view>
+  <view class="input_box">
+    <input class="input" type="number" focus="{{true}}" bindinput="input" bindblur='blur' placeholder-class="input-placeholder"  placeholder="请输入提现金额"></input>
+  </view>
+  <view class="tips">当前余额 10.00<text space="ensp" class="take_all"> 全部提现</text> </view>
+</view>
+<view class="btn_box">
+  <button class="button"  type="primary"  bind:tap="submit">确认提现</button>
+</view>

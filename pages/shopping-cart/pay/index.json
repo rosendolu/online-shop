@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-tag": "@vant/weapp/tag/index"
+  }
+}

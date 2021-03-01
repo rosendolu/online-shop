@@ -1,0 +1,10 @@
+/* components/loadmore/index.wxss */
+.loadmore {
+  margin: 0 36rpx;
+}
+.nomore {
+  text-align: center;
+  padding-top: 32rpx;
+  font-size: 24rpx;
+  color: #999999;
+}

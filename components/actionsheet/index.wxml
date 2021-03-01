@@ -1,0 +1,29 @@
+<wxs module="utils">
+    var join = function(a,b) {
+        return a+b
+    };
+    var isNotSlot = function(v) {
+        return typeof v !== 'string'
+    }
+    module.exports = {
+        join: join,
+        isNotSlot: isNotSlot
+    }
+</wxs>
+<view wx:if="{{mask}}" class="weui-mask {{show ? '' : 'weui-mask_hidden'}} {{maskClass}}" catch:tap="closeActionSheet"></view>
+<view class="weui-actionsheet topBorder {{show ? 'weui-actionsheet_toggle' : ''}} {{extClass}}">
+  <!-- 标题 -->
+  <block wx:if="{{title}}">
+    <view class="weui-actionsheet__title">
+      <view class="weui-actionsheet__title-text">{{title}}</view>
+    </view>
+  </block>
+  <slot name="title" wx:else></slot>
+  <slot name="body"></slot>
+  <!-- 取消按钮 -->
+  <view class="weui-actionsheet__action" wx:if="{{showCancel}}">
+    <view class="weui-actionsheet__cell" data-type="close" id="iosActionsheetCancel" catch:tap="closeActionSheet">
+      {{cancelText}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+/* @import "../weui-wxss/src/style/widget/weui-tips/weui-badge.wxss"; */
+.red_dot {
+  position: absolute;
+  top: 15rpx;
+  /* right: 60rpx; */
+  left: 156rpx;
+
+  border-radius: 30rpx;
+  padding: 0 8rpx;
+  min-width: 30rpx;
+
+  height: 30rpx;
+  box-sizing: border-box;
+
+  line-height: 30rpx;
+  font-size: 20rpx;
+  text-align: center;
+}

@@ -1,0 +1,46 @@
+.popup {
+  position: fixed;
+  z-index: 99;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.popup > .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.popup .body {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 64rpx;
+  right: 64rpx;
+  background: #fff;
+  /* left: 50%;
+  transform: translate(-50, -50%); */
+  text-align: center;
+  line-height: 2;
+  border-radius: 16rpx;
+}
+.title {
+  font-size: 42rpx;
+  color: #000;
+  line-height: 2.5;
+}
+.txt {
+  font-size: 32rpx;
+  color: #333;
+}
+.hide {
+  transition: transform 0.3s;
+  /* transform: translateY(100vh); */
+  transform: scale(0);
+  /* opacity: 0; */
+  background: rgb(0, 0, 0, 0);
+}

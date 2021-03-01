@@ -1,0 +1,19 @@
+<!-- <wenavigation title="编辑用户信息"></wenavigation> -->
+<mp-cells>
+    <mp-cell title="姓名" >
+        <input bindinput="formInputChange"  data-key='name'  type="text" class="weui-input" placeholder="请输入称呼"/>
+    </mp-cell>
+    <mp-cell title="生日" >
+      <picker  mode="date" value="{{date}}" start="1900-01-01" end="2020-01-01" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </mp-cell>
+    <mp-cell  title="联系方式">
+      <input bindinput="formInputChange" data-key='phone' type="number" class="weui-input" placeholder="请输入联系电话"/>
+      <button slot="footer" type="default" class="weui-vcode-btn">获取验证码</button>
+    </mp-cell> 
+    <mp-cell title="验证码" >
+      <input type="number" bindinput="formInputChange" data-key='code'  class="weui-input" placeholder="请输入验证码"/>
+    </mp-cell>
+</mp-cells>
+<button class="weui-btn" type="primary" bindtap="submitForm">更新</button>

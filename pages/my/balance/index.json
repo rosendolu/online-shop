@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我的钱包",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "mp-slideview": "weui-miniprogram/slideview/slideview",
+    "van-empty": "@vant/weapp/empty/index"
+  }
+}

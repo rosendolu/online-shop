@@ -1,0 +1,41 @@
+{
+  "name": "online-shop",
+  "version": "1.0.0",
+  "description": "online shop demo",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint --fix .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "shop 简易商城"
+  ],
+  "private": false,
+  "author": "rosendolu",
+  "license": "MIT",
+  "dependencies": {
+    "@vant/weapp": "^1.2.2",
+    "weui-miniprogram": "^0.2.2",
+    "miniprogram-barrage": "^1.1.0",
+    "wxml-to-canvas": "^1.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}

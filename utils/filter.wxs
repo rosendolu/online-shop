@@ -1,0 +1,70 @@
+module.exports = {
+  moreThan99: function (num) {
+    return num > 99 ? '99+' : num + '';
+  },
+  hidePhone: function (phoneNumber = '') {
+    var temStr = phoneNumber + '';
+    return temStr.slice(0, 3) + '****' + temStr.slice(7);
+  },
+  formatMoney: function (num = '0.00') {
+    return ((num - 0).toFixed(2) - 0).toLocaleString();
+  },
+  ossImgCompress: function (url, w, h) {
+    // obj = {
+    //   url: '',
+    //   w: '',
+    //   h: '',
+    //   q:80
+    // };
+    // ?x-oss-process=image/resize,w_300,h_300/quality,q_90/watermark,icon_watermark,t_90,g_se,x_10,y_10
+    if (w && h) {
+      return url + '?x-oss-process=image/resize,w_' + w + ',h_' + h + '/quality,q_80';
+    } else if (w) {
+      return url + '?x-oss-process=image/resize,w_' + w + '/quality,q_80';
+    } else if (h) {
+      return url + '?x-oss-process=image/resize' + ',h_' + h + '/quality,q_80';
+    } else {
+      return url + '?x-oss-process=image' + '/quality,q_80';
+    }
+  },
+  sendCode: function (seconds) {
+    return seconds > 0 ? (seconds > 9 ? seconds + '秒' : '0' + seconds + '秒') : '发送验证码';
+  },
+  orderTag: function (state) {
+    if (state === 1) {
+      return '未付款';
+    } else if (state === 2) {
+      return '已付款';
+    } else if (state === 3) {
+      return '已接单';
+    } else if (state === 4) {
+      return '已完成';
+    }
+  },
+  orderTagType: function (state) {
+    if (state === 1) {
+      return 'danger';
+    } else if (state === 2) {
+      return 'primary';
+    } else if (state === 3) {
+      return 'warning';
+    } else if (state === 4) {
+      return 'success';
+    }
+  },
+  orderOption: function (state) {
+    if (state === 1) {
+      return '尚未支付';
+    } else if (state === 2) {
+      return '接单';
+    } else if (state === 3) {
+      return '完成';
+    } else if (state === 4) {
+      return '已完成';
+    }
+  },
+  dataLocalString: function (date) {
+    // eslint-disable-next-line no-undef
+    return getDate(date).toLocaleString();
+  },
+};

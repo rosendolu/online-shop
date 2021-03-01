@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "wesearchbar": "weui-miniprogram/searchbar/searchbar",
+    "we-vtabs": "/components/vtabs/vtabs",
+    "we-vtabs-content": "/components/vtabs-content/vtabs-content",
+    "vansticky": "@vant/weapp/sticky/index",
+    "r-card": "/components/r-card/index"
+  }
+}

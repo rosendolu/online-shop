@@ -1,0 +1,36 @@
+<wxs module="filter" src="../../../utils/filter.wxs"></wxs>
+<!-- <wenavigation bind:clickLeft="jumpSearch" back="{{false}}" background="rgba(0,0,0,0)">
+ <weicon size='{{36}}' icon="search" color="#fff"></weicon>
+</wenavigation> -->
+<!-- <wenavigation title="分类"></wenavigation> -->
+<vansticky>
+  <view class="top">
+    <!-- <image class="top_img" src="https://images.pexels.com/photos/3285791/pexels-photo-3285791.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" mode="aspectFill"></image> -->
+    <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="{{6000}}" duration="{{800}}">
+      <block wx:for="{{bannerList}}" wx:key="hash">
+        <swiper-item class="swiper_item">
+          <vanimage bind:click="clickBanner" data-index='{{index}}' use-loading-slot lazy-load fit="cover" width="100%" lazy-load height="300rpx" src="{{filter.ossImgCompress(item.url)}}">
+            <vanloading slot="loading" type="spinner" size="20" vertical />
+          </vanimage>
+          <!-- <wanimage class="item_item "  bind:tap="clickBanner" data-index="{{index}}" mode="aspectFill" src="{{item.src}}" /> -->
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- <view bind:tap="jumpSearch" class="search" style="top:{{6+statusBarHeight}}px">
+      <weicon size='{{36}}' icon="search" color="#fff"></weicon>
+    </view> -->
+  </view>
+</vansticky>
+<view class="sort">
+  <we-vtabs vtabs="{{vtabs}}" active-tab="{{activeTab}}" activeClass="active_class" bindtabclick="onTabCLick" bindchange="onChange">
+    <block wx:for="{{vtabs}}" wx:key="id">
+      <we-vtabs-content tabIndex="{{index}}">
+        <view class="vtabs-content-item">
+          <block wx:for="{{item.list}}" wx:for-item="goods" wx:key="id">
+            <r-card item='{{goods}}'></r-card>
+          </block>
+        </view>
+      </we-vtabs-content>
+    </block>
+  </we-vtabs>
+</view>

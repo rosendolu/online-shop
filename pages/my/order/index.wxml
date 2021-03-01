@@ -1,0 +1,32 @@
+<wxs src="../../../utils/filter.wxs" module="filter"></wxs>
+<!-- <wenavigation title="我的订单"></wenavigation> -->
+<van-sticky>
+  <van-tabs active="{{active}}" bind:change="tabChange">
+    <van-tab title="待接单" name="2"></van-tab>
+    <van-tab title="待收货" name="3"></van-tab>
+    <van-tab title="已完成" name="4"></van-tab>
+  </van-tabs>
+</van-sticky>
+
+<block wx:if="{{list.length}}">
+  <view class="list" wx:for="{{list}}" wx:key="orderId" data-index='{{index}}' bind:tap="checkDetail">
+    <view class="box" wx:for="{{item.goods}}" wx:for-item="goods" wx:key="buyHash">
+      <vanimage radius='8rpx' use-loading-slot lazy-load fit="cover" width="166rpx" height="166rpx" src="{{filter.ossImgCompress(goods.poster,166,166)}}">
+        <vanloading slot="loading" type="spinner" size="20" vertical />
+      </vanimage>
+      <!-- <image class="center"  mode="aspectFill" src="{{filter.ossImgCompress(item.goods.poster,166,166)}}"></image> -->
+      <view class="right">
+        <view class="title overflow-word-line1">{{goods.title}}</view>
+        <!-- <view class="skuname">{{item.skuname || 'fsdfsf'}}</view> -->
+        <van-tag type="warning">{{goods.skuname || ''}}</van-tag>
+        <view class="price">
+          <text>¥<text style="font-size:36rpx">{{goods.price}}</text></text>
+          <view style="color:rgba(0,0,0,0.5)">x{{goods.count}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <van-empty description="暂无数据" />
+</block>

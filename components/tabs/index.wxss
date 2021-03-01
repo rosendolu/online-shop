@@ -1,0 +1,76 @@
+.weui-tabs {
+  width: 100%;
+}
+.weui-tabs-bar__wrp {
+  /* background: rgba(0, 0, 0, 0.79); */
+  width: 100%;
+  /* background: #fff; */
+}
+.weui-tabs-bar__content {
+  width: 100%;
+  white-space: nowrap;
+
+  height: 44px;
+  line-height: 44px;
+}
+.weui-tabs-bar__item {
+  display: inline-block;
+  /* padding: 0 24rpx; */
+}
+.weui-tabs-bar__title {
+  display: inline-block;
+  position: relative;
+  font-size: 26rpx;
+  color: #fff;
+}
+/* 视频播放页 */
+.weui-tabs-bar__item .active_0 {
+  color: #ff5d3f;
+  font-size: 32rpx;
+  /* font-weight: bold; */
+}
+/* 首页 */
+.weui-tabs-bar__item .active_home {
+  color: #ff5d3f;
+  font-size: 32rpx;
+  /* font-weight: bold; */
+}
+/* 视频播放页 */
+.tab_0 {
+  color: #fff;
+  padding: 0 24rpx;
+  font-size: 24rpx;
+}
+/* 首页 */
+.tab_home {
+  color: #333333;
+  font-size: 24rpx;
+  padding: 0 24rpx;
+}
+.tab_1 {
+  background: #f8f9fa;
+  border-radius: 8rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding: 0 32rpx;
+  margin-right: 16rpx;
+  text-align: center;
+  color: #282828;
+  font-size: 24rpx;
+  border: 1px solid #f8f9fa;
+}
+
+.weui-tabs-bar__item .active_1 {
+  background: #ffecea;
+  border: 1px solid #ff6052;
+}
+.activeTab_line {
+  position: absolute;
+  left: 50%;
+  bottom: 10rpx;
+  transform: translateX(-50%);
+  width: 16rpx;
+  height: 4rpx;
+  background: #ff5838;
+  border-radius: 8rpx;
+}

@@ -1,0 +1,11 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "wesearchbar": "weui-miniprogram/searchbar/searchbar",
+    "vansticky": "@vant/weapp/sticky/index",
+    "c-card": "/components/c-card/index",
+    "r-card": "/components/r-card/index",
+    "vansearch": "@vant/weapp/search/index"
+  }
+}

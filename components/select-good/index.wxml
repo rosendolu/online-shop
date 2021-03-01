@@ -1,0 +1,35 @@
+<view class="popup {{show?'show':'hide'}}" catch:touchmove="cancelMove" bind:tap="tap" >
+  <view class="mask {{show?'showmask':''}}" data-act='close'></view>
+  <view class="main">
+    <view class="goods_info">
+      <image lazy-load="{{true}}" mode="aspectFill" class="poster" src="{{skuInfo.img}}" />
+      <view class="right" >
+          <view class="title overflow-word-line1">{{info.title}}</view>
+          <view class="price">¥{{skuInfo.price}}   <text wx:if="{{skuInfo.price_origin}}" space="ensp" class="price_original"> ¥{{skuInfo.price_origin}} </text></view>
+          <view class="selected">已选<text style="color:#333" space="ensp"> {{skuInfo.name}} {{num}}个 </text></view>
+      </view>
+    </view>
+    <view class="body">
+      <view class="title">型号</view>
+      <view class="list" bind:tap="selectSku">
+        <block wx:for="{{info.sku}}" wx:key="hash">
+          <view data-index='{{index}}' class="tag {{selectedSkuIndex ===index?'tag_active':''}}">{{item.name}}</view>
+        </block>
+        <!-- <view style="flex:1;"></view> -->
+      </view>
+      <!-- <block wx:if="{{colors.length}}">
+        <view class="title">颜色</view>
+        <view class="list" bind:tap="skuColor">
+          <block wx:for="{{colors}}" wx:key="id">
+            <view  data-index='{{index}}' class="tag {{selectedColorIndex===index?'tag_active':''}}">{{item.name}}</view>
+          </block>
+        </view>
+      </block> -->
+      <view class="title nums">数量 <van-stepper  input-width="22px" button-size="22px" min="1" integer max="{{total}}" value="{{num}}" bind:change="numchange" /></view> 
+    </view>
+    <view class="bottom">
+      <view class="btn buy" data-act='buy'>立即购买</view>
+      <view class="btn cart" data-act='add'>加入购物车</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,98 @@
+/**app.wxss**/
+@import './utils/weui.wxss';
+@import './miniprogram_npm/@vant/weapp/common/index.wxss';
+page {
+  --weui-BG-0: #ededed;
+  --weui-BG-1: #f7f7f7;
+  --weui-BG-2: #fff;
+  --weui-BG-3: #f7f7f7;
+  --weui-BG-4: #4c4c4c;
+  --weui-BG-5: #fff;
+  --weui-FG-0: rgba(0, 0, 0, 0.9);
+  --weui-FG-HALF: rgba(0, 0, 0, 0.9);
+  --weui-FG-1: rgba(0, 0, 0, 0.5);
+  --weui-FG-2: rgba(0, 0, 0, 0.3);
+  --weui-FG-3: rgba(0, 0, 0, 0.1);
+  --weui-RED: #fa5151;
+  --weui-ORANGE: #fa9d3b;
+  --weui-YELLOW: #ffc300;
+  --weui-GREEN: #91d300;
+  --weui-LIGHTGREEN: #95ec69;
+  --weui-BRAND: #07c160;
+  --weui-BLUE: #10aeff;
+  --weui-INDIGO: #1485ee;
+  --weui-PURPLE: #6467f0;
+  --weui-WHITE: #fff;
+  --weui-LINK: #576b95;
+  --weui-TEXTGREEN: #06ae56;
+  --weui-FG: #000;
+  --weui-BG: #fff;
+  --weui-TAG-TEXT-ORANGE: #fa9d3b;
+  --weui-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+  --weui-TAG-TEXT-GREEN: #06ae56;
+  --weui-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+  --weui-TAG-TEXT-BLUE: #10aeff;
+  --weui-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+  --weui-TAG-TEXT-BLACK: rgba(0, 0, 0, 0.5);
+  --weui-TAG-BACKGROUND-BLACK: rgba(0, 0, 0, 0.05);
+
+  --btn_bg_warn: linear-gradient(135deg, #ffba0d, #ffc30d 69%, #ffcf0d);
+  --btn_pri_txt_color: #ee0a24;
+  --btn_bg_danger: linear-gradient(135deg, #f2140c, #f2270c 70%, #f24d0c);
+  --page_bg_gray: #f7f7f7;
+  --btn_bg_hover: #ececec;
+}
+
+page {
+  font-family: PingFangSC-Regular, PingFang-SC;
+  box-sizing: border-box;
+  min-height: 100%;
+  min-width: 100%;
+}
+.btn::after {
+  display: none;
+}
+button::after {
+  display: none;
+}
+view,
+text {
+  word-break: break-all;
+}
+image {
+  flex-shrink: 0;
+}
+
+/*  覆盖vant 样式 */
+.van-hairline--top-bottom::after {
+  border: none !important;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/* 溢出字符用...代替 */
+.overflow-word-line1,
+.overflow-word-line2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+
+.overflow-word-line1 {
+  -webkit-line-clamp: 1;
+}
+
+.overflow-word-line2 {
+  -webkit-line-clamp: 2;
+}
+
+/*  覆盖样式  **/
+.weui-search-bar__box .weui-icon-search_in-box {
+  top: 50%;
+  margin-top: 0;
+  transform: translateY(-50%);
+}

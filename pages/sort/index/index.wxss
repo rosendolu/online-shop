@@ -1,0 +1,67 @@
+/* @import '/utils/weui.wxss'; */
+.top {
+  position: relative;
+}
+.top_img {
+  width: 100%;
+  height: 250rpx;
+}
+
+page {
+  background-color: #ffffff;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 300rpx;
+}
+.swiper_item {
+  /* border-radius: 16rpx; */
+  width: 100%;
+  height: 100%;
+}
+
+.item_item {
+  /* border-radius: 16rpx; */
+  width: 100%;
+  height: 100%;
+  /* margin: 0 20rpx; */
+}
+.search {
+  position: fixed;
+  top: 36rpx;
+  left: 36rpx;
+  z-index: 9;
+  /* background: red; */
+}
+.search .plain_search {
+  background: none;
+}
+.sort {
+  height: calc(100% - 300rpx - 100rpx);
+}
+.active_class {
+  /* border-color: var(--weui-RED); */
+  position: relative;
+  background: #fff;
+  color: var(--btn_pri_txt_color);
+}
+.active_class::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8rpx;
+  background: var(--btn_pri_txt_color);
+  border-top-right-radius: 8rpx;
+  border-bottom-right-radius: 8rpx;
+}
+
+.vtabs-content-item {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+  padding: 16rpx;
+}

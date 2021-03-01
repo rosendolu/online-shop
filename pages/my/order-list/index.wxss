@@ -1,0 +1,53 @@
+page {
+  background: var(--page_bg_gray);
+}
+.list {
+  border-radius: 16rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin: 16rpx 16rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.list .left {
+  padding-right: 16rpx;
+}
+.list .left .row {
+  font-size: 26rpx;
+  color: red;
+  line-height: 1.5;
+}
+.list .right {
+  flex: 1;
+}
+.box {
+  border-bottom: 1px solid #d9d9d9;
+}
+.box:last-child {
+  border: none;
+}
+.list .box {
+  display: flex;
+  align-items: center;
+  padding: 8rpx 16rpx;
+}
+.list .right {
+  padding-left: 16rpx;
+  padding-right: 32rpx;
+  flex: 1;
+}
+
+.list .right .title {
+  font-size: 36rpx;
+  color: #333;
+  text-align: left;
+  overflow: hidden;
+}
+.list .right .price {
+  font-size: 32rpx;
+  /* padding: 16rpx 0; */
+  color: #fd593b;
+  display: flex;
+  justify-content: space-between;
+}

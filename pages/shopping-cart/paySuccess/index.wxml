@@ -1,0 +1,63 @@
+<wxs src="../../../utils/filter.wxs" module="filter"></wxs>
+<wenavigation title="订单详情"></wenavigation>
+<!-- <view class="top">
+  <icon type="success" size="48"/> 
+  <view class="txt">支付成功</view>
+</view> -->
+<view class="list">
+  <block wx:for="{{list}}" wx:key="buyHash">
+    <view class="item">
+      <vanimage  radius='8rpx' use-loading-slot lazy-load fit="cover" width="166rpx"   height="166rpx" src="{{filter.ossImgCompress(item.poster,166,166)}}">
+        <vanloading slot="loading" type="spinner" size="20" vertical />
+      </vanimage>
+      <!-- <image class="poster" src="{{filter.ossImgCompress(item.poster,166,166)}}" /> -->
+      <view class="right">
+        <view class="title overflow-word-line1">{{item.title}}</view>
+          <van-tag type="warning">{{item.skuname || ''}}</van-tag>
+        <view class="price">
+          <text>¥<text style="font-size:36rpx">{{item.price}}</text></text>
+          <view style="color:rgba(0,0,0,0.5)">x{{item.count}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="order">
+  <view class="title">订单信息</view>
+  <view class="item" >订单编号   <view class="txt">{{paidGoods.orderId}}</view> </view>
+  <view class="item" >总金额    <view class="txt">{{paidGoods.sumup /100}}¥</view></view>
+  <view class="item" >收货地址    <view class="txt">{{paidGoods.address.barName}}</view></view>
+  <view class="item" >具体地址    <view class="txt">{{paidGoods.address.seat}}</view></view>
+  <view class="item" >联系方式    <button wx:if="{{paidGoods.address.phone && userInfo.role ===10}}" size="mini" type="default" bind:tap="call" data-phone='{{paidGoods.address.phone}}'>联系买家</button>   <view class="txt">{{paidGoods.address.phone}}</view></view>
+  <view class="item" >范码    <view class="txt">{{paidGoods.fanCode ||''}}</view></view>
+  <view class="item" >备注信息    <view class="txt">{{paidGoods.msg ||''}}</view></view>
+</view>
+<view class="send" wx:if="{{paidGoods.deliveryInfo.nickname}}">
+  <view class="title">配送员</view>
+  <view class="sendinfo">
+    <image  class="avatar" src="{{paidGoods.deliveryInfo.avatar}}"></image>
+    <view class="nickname">{{paidGoods.deliveryInfo.nickname}}</view>
+    <block  wx:if="{{paidGoods.state ===3 ||userInfo.role ===10 }}">
+      <button size="mini" type="default" data-phone='{{paidGoods.deliveryInfo.phone}}' bind:tap="call">电话联系配送员</button>
+
+    </block>
+  </view>
+</view>
+  <!-- <view class="el selector" >
+    <weicon  type='field' icon='location' size='{{28}}' color='gray'></weicon>
+    <view class="addr center">收货地址</view>
+    <view  class="addr_bar right">{{paidGoods.address.barName}}</view>
+  </view>
+  <view class="el info">
+    <image class='info_icon' src="/static/icon/call.png" />
+    <view class="info_phone center">{{paidGoods.address.phone}}</view>
+    <view class="info_name" >{{paidGoods.address.seat}}</view>
+  </view>
+  <view class="el" style="justify-content: space-between;">
+    <view>范码</view>
+    <view>{{paidGoods.fanCode || ''}}</view>
+  </view> -->
+
+
+<button class="btn_contact" type="primary" open-type="contact">联系商家</button>
+<button type="default" bind:tap="copyId">复制订单编号</button>

@@ -1,0 +1,7 @@
+node_modules/
+miniprogram_npm/
+*.zip
+*.rar
+.git_vice
+.tmp/
+png.sh

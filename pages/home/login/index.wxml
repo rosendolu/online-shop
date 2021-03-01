@@ -1,0 +1,17 @@
+
+<wxs module="filter"  src="../../../utils/filter.wxs"></wxs>
+<view class="bg"></view>
+<view class="body">
+  <!-- <view class="inputbox">
+    <input type="number" maxlength="11" class="input" data-key='phone' bindfocus="onFocus"  bindinput="bindHideKeyboard" placeholder="请输入手机号" />
+    <view class="code {{seconds >0?'inacitve':''}}" bind:tap="sendCode" >{{filter.sendCode(seconds)}}</view>
+  </view>
+  <view class="inputbox">
+    <input type="number"  class="input" maxlength="6" bindfocus="onFocus" data-key='verifyCode' placeholder="请输入验证码" bindinput="inputCode"/>
+  </view> -->
+
+    <button type="primary"  loading="{{loading}}" open-type="getUserInfo"  bindgetuserinfo="getUserInfo">微信授权登录</button>
+    <button bind:tap="skip"  type="default" >返回上一页</button>
+    <!-- <button class="btn_contact weui-btn" type="default" plain="{{true}}" open-type="contact">在线客服</button> -->
+</view> 
+<bindphone class="popup"></bindphone>

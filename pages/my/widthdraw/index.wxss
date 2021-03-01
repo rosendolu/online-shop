@@ -1,0 +1,55 @@
+page {
+  background: var(--page_bg_gray);
+}
+.body {
+  padding: 32rpx;
+  background: #fff;
+  margin-top: 16rpx;
+}
+.input_box {
+  position: relative;
+  padding-left: 64rpx;
+}
+.input {
+  line-height: 2;
+  font-size: 48rpx;
+  font-weight: bold;
+  position: relative;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 32rpx 0;
+}
+.input-placeholder {
+  font-size: 28rpx;
+}
+.input_box:before {
+  content: '¥';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  color: #000;
+  font-size: 48rpx;
+  font-weight: bold;
+  transform: translateY(-50%);
+}
+.title {
+  font-size: 34rpx;
+
+  line-height: 2;
+}
+.button {
+  margin-top: 32rpx;
+}
+.btn_box {
+  padding: 16rpx;
+}
+.money {
+  font-size: 28rpx;
+  line-height: 2;
+}
+.tips {
+  font-size: 24rpx;
+}
+.tips .take_all {
+  color: var(--weui-TAG-TEXT-ORANGE);
+}

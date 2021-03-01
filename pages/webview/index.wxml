@@ -1,0 +1,7 @@
+<view class="contaienr">
+    <!-- <web-view src="{{src}}"></web-view> -->
+    <web-view wx:if="{{src}}" src="{{src}}" />
+    <view class="empty" wx:else>
+      <van-empty  image="error" image="/static/empty.png" description="链接地址无效" />
+    </view>
+</view>

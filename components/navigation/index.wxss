@@ -1,0 +1,4 @@
+.weui-navigation-bar__inner .weui-navigation-bar__center {
+  font-size: 15px;
+  color: #000000;
+}

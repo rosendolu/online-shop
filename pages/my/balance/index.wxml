@@ -1,0 +1,60 @@
+<!-- <wenavigation title="我的钱包"></wenavigation> -->
+<wxs src="../../../utils/filter.wxs" module="filter"></wxs>
+<van-sticky>
+  <view class="top">
+    <view class="all">总资产</view>
+    <view class="all_price">¥ {{info.balance}}</view>
+    <view class="center">
+      <view class="left">
+        已提现
+        <view class="money">{{info.takeout}}</view>
+      </view>
+      <view class="left">
+        累计收入
+        <view class="money">{{info.sum}}</view>
+      </view>
+    </view>
+    <!-- bind:tap="widthDraw" -->
+    
+    <view class="flexbox">
+      <view class="widthdraw">
+        提现
+        <button class="button_reset" open-type="contact"></button>
+      </view>
+    </view>
+      <view class="tip">提示：当前自动提现尚未开通，联系客服手动提现</view>
+    <!-- <button class="button" open-type="contact">联系客服手动提现</button> -->
+  </view>
+  <van-tabs active="{{active}}" bind:change="tabChange">
+    <van-tab title="返现" name="1">
+      <view class="list" wx:if="{{list.length}}">
+        <block wx:for="{{list}}" wx:key="id">
+          <view class="box">
+            <view class="left">{{filter.dataLocalString(item.createdAt)}}</view>
+            <view class="center">{{item.txt}}</view>
+            <view class="right">{{item.fee}}</view>
+          </view>
+        </block>
+      </view>
+      <block wx:else>
+        <van-empty description="暂无数据" />
+      </block>
+    </van-tab>
+    <van-tab title="提现" name="2">
+      <view class="list" wx:if="{{takeoutlist.length}}">
+        <block wx:for="{{takeoutlist}}" wx:key="id">
+          <view class="box">
+            <view class="left">{{filter.dataLocalString(item.createdAt)}}</view>
+            <view class="center">{{item.txt}}</view>
+            <view class="right">{{item.fee}}</view>
+          </view>
+        </block>
+      </view>
+      <block wx:else>
+        <van-empty description="暂无数据" />
+      </block>
+    </van-tab>
+    <!-- <van-tab title="已接单" name="3"></van-tab>
+    <van-tab title="已完成" name="4"></van-tab> -->
+  </van-tabs>
+</van-sticky>

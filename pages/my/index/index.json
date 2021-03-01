@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "we-cell": "weui-miniprogram/cell/cell",
+    "we-cells": "weui-miniprogram/cells/cells",
+    "we-slideview": "weui-miniprogram/slideview/slideview"
+  }
+}

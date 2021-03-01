@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "mp-slideview": "weui-miniprogram/slideview/slideview",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-tag": "@vant/weapp/tag/index"
+  }
+}

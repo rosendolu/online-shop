@@ -1,0 +1,49 @@
+  <wenavigation title="搜索"></wenavigation>
+<van-sticky>
+  <wesearchbar class="searchbar" focus='{{true}}' throttle='{{300}}' bindselectresult="selectResult" search="{{search}}" bindclear="clear" bindinput='input' value="{{value}}" cancel='{{false}}' placeholder='{{placeholder}}'></wesearchbar>
+</van-sticky>
+<view class="body">
+  <view class="list {{showList?'inactive':''}}">
+    <view class="latest">最近搜索</view>
+    <view class="latest_body">
+        <view class="tag">最近搜索1</view>
+        <view class="tag">最近搜索2</view>
+        <view class="tag">最近搜索3</view>
+        <view class="tag">最近搜索3</view>
+        <view class="tag">最近搜索3</view>
+        <view class="tag">最近搜索3</view>
+        <view class="tag">最近搜索3</view>
+    </view>
+    <view class="hot">热门搜索</view>
+    <view class="hot_body">
+      <view class="tag">热门搜索2</view>
+        <view class="tag">热门搜索3</view>
+        <view class="tag">热门搜索3</view>
+        <view class="tag">热门搜索3</view>
+        <view class="tag">热门搜索3</view>
+        <view class="tag">热门搜索3</view>
+    </view>
+    <view class="hot">热门分类</view>
+
+
+    <scroll-view scroll-x  scroll-with-animation="{{true}}">
+      <view class="scroll_box">
+        <block wx:for="{{bannerList}}" wx:key="hash">
+          <view  bindtap="handleTabClick" data-index="{{index}}">
+            <view class="scroll_el" >
+              <vanimage  radius='8rpx' use-loading-slot lazy-load fit="cover" width="166rpx" lazy-load height="166rpx" src="{{item.src}}">
+                <vanloading slot="loading" type="spinner" size="20" vertical />
+              </vanimage>
+              <view class="scroll_el_txt">{{item.hash}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="list {{showList?'':'inactive'}}" >
+    <block wx:for="{{6}}" wx:key="index">
+      <r-card item="{{item}}"></r-card>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+<wenavigation title=""></wenavigation>
+<!-- <view class="bgbox">
+  <image style="width:100%;height:100%" src="" mode="aspectFill"></image>
+</view> -->
+<view class="body">
+  <view class="userinfo" bind:tap="userCenter">
+    <image mode="aspectFill" src="{{userInfo.avatar|| '/static/icon/avatar.png'}}" /> 
+    <view class="nickname" style="flex:1;"   >{{signedIn?userInfo.nickname:'登录' }}</view>
+    <!-- <button wx:else  open-type="getUserInfo" class="login"  bindgetuserinfo="getUserInfo" >登录</button> -->
+    <view wx:if="{{userInfo.fanCode}}" class="fanCode" style="flex:1;">范码: {{userInfo.fanCode}}</view>
+  </view>
+  <view class="row" bind:tap="tapCell">
+    <we-cells >
+        <!-- <we-cell link hover data-url="/pages/my/balance/index" value="我的钱包" footer="" >
+          <image slot='icon' src="/static/icon/icon_my_money.png"  style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;" ></image>
+        </we-cell> -->
+        <we-cell link hover data-url="/pages/my/order/index" value="我的订单" footer="">
+          <image slot='icon' src="/static/icon/icon_my_order.png"  style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;" ></image>
+        </we-cell>
+        <view class="outer">
+          <we-cell link hover  value="联系客服" >
+            <image slot='icon' src="/static/icon/lianxikefu.png"  style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;" ></image>
+          </we-cell>
+          <button  class="contact" open-type="contact"></button>
+        </view>
+        <we-cell link hover data-url="/pages/my/feedback/index" value="意见反馈" footer="">
+          <image slot='icon' src="/static/icon/icon_my_feedback.png"  style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;" ></image>
+        </we-cell>
+        <!-- <we-cell link url="./cell" value="有跳转URL" footer="">
+          <weicon slot="icon" icon='arrow'  style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></weicon>
+        </we-cell> -->
+      </we-cells>
+  </view>
+  <view class="row" wx:if="{{userInfo.role}}" bind:tap="tapCell">
+    <we-cells >
+      <we-cell link hover data-url="/pages/my/order-list/index" value="订单管理" footer="">
+        <!-- <weicon slot="icon" icon='arrow' ></weicon> -->
+        <image slot='icon' src="/static/icon/icon_order.png"  style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;" ></image>
+      </we-cell>
+      <we-cell link hover data-url="/pages/my/order-send/index" value="我的派单" footer="">
+        <!-- <weicon slot="icon" icon='arrow' ></weicon> -->
+        <image slot='icon' src="/static/icon/icon_my_post.png"  style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;" ></image>
+      </we-cell>
+     </we-cells>
+  </view>
+  <button wx:if="{{signedIn}}"  bind:tap="logout" class="logout">退出登录</button>
+</view>

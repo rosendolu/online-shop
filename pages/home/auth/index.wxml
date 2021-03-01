@@ -1,0 +1,19 @@
+<!-- <video class="video" src="http://osslu.wjc66.cn/static/1603936250789112_1603936270488777.mp4" object-fit='cover' show-progress='{{false}}' loop="{{true}}" autoplay="{{true}}"  muted="{{true}}" show-fullscreen-btn="{{false}}" show-play-btn="{{false}}" ></video> -->
+<view class="bg"></view>
+<view class="body">
+  <view class="inputbox">
+    <input type="number" maxlength="11" class="weui-input input {{focus?'focus':''}} {{animate?'tip_shake':''}}"  bindfocus="onFocus" focus="{{focus}}" bindblur="blur" bindinput="bindHideKeyboard" placeholder="{{placeHolder}}" />
+  </view>
+  <!-- <view class="weui-cell">
+      <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入文本" />
+      </view>
+  </view> -->
+  <view class="weui-btn-area {{val?'':'inactive'}}">
+      <!-- <button class="weui-btn" type="primary"  loading="{{loading}}" open-type="getUserInfo"  bindgetuserinfo="getUserInfo">成为尊享会员</button> -->
+      <button class="weui-btn" type="primary"  loading="{{loading}}" bind:tap="start">开始体验</button>
+  </view>
+
+    <!-- <button bind:tap="skip" class="btn_contact weui-btn" type="default" plain="{{true}}" >跳过</button> -->
+    <!-- <button class="btn_contact weui-btn" type="default" plain="{{true}}" open-type="contact">在线客服</button> -->
+</view> 

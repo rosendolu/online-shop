@@ -1,0 +1,166 @@
+.popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.popup .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.showmask {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  transition: all 0.3s;
+}
+
+.main {
+  height: 66%;
+
+  border-top-left-radius: 16rpx;
+  border-top-right-radius: 16rpx;
+  padding: 16rpx;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.bottom {
+  height: 76rpx;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 32rpx;
+}
+
+.btn {
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  /* background: linear-gradient(to right, rgb(255, 96, 52), rgb(238, 10, 36)); */
+  color: #fff;
+  font-size: 26rpx;
+  border-radius: 42rpx;
+  box-shadow: 0 3px 6px 0 rgba(255, 65, 66, 0.2);
+  font-weight: 700;
+}
+
+.cart {
+  background: var(--btn_bg_danger);
+}
+
+.buy {
+  background: var(--btn_bg_warn);
+}
+
+.show {
+  transition: transform 0.3s ease-in;
+  transform: translateY(0);
+}
+
+.hide {
+  transition: transform 0.3s ease-out;
+  transform: translateY(100%);
+}
+
+.body {
+  height: calc(100% - 76rpx - 200rpx);
+  overflow-y: scroll;
+}
+
+.goods_info {
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+}
+
+.goods_info .poster {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 8rpx;
+  background: rgba(153, 153, 153, 0.644);
+}
+
+.goods_info .right {
+  padding-left: 16rpx;
+  overflow: hidden;
+}
+
+.goods_info .title {
+  font-size: 36rpx;
+  color: #333;
+  text-align: left;
+  overflow: hidden;
+}
+
+.goods_info .price {
+  font-size: 32rpx;
+  padding: 16rpx 0;
+  color: #fd593b;
+}
+
+.goods_info .selected {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 26rpx;
+}
+
+.body .title {
+  font-size: 26rpx;
+  color: #262626;
+  line-height: 2.5;
+}
+
+.tag_active {
+  background: #fcedeb;
+  border: 1px solid #f2270c;
+  font-size: 11px;
+  color: #f2270c;
+  font-weight: 700;
+  height: 28px;
+}
+
+.body .list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.body .tag {
+  flex-shrink: 0;
+  padding: 0 18px;
+  min-width: 20px;
+  max-width: 270px;
+  overflow: hidden;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: #262626;
+  background: #f2f2f2;
+  border-radius: 15px;
+}
+
+.nums {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price_original {
+  text-decoration: line-through;
+  font-size: 24rpx;
+  color: #00000080;
+}

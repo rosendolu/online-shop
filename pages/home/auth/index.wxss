@@ -1,0 +1,79 @@
+page {
+  position: relative;
+}
+.video {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* url('https://857client.oss-cn-hangzhou.aliyuncs.com/static/login_bg.jpg'); */
+  /* background: no-repeat center/ cover
+    url('https://857client.oss-cn-hangzhou.aliyuncs.com/static/bengdi.jpg'); */
+  background: no-repeat center/ cover
+    url('https://857client.oss-cn-hangzhou.aliyuncs.com/static/bg_2.jpg');
+  /* background: no-repeat center/ cover
+    url('https://857client.oss-cn-hangzhou.aliyuncs.com/static/login_bg.jpg'); */
+  /* background: no-repeat left center/ auto 100vh
+    url('https://857client.oss-cn-hangzhou.aliyuncs.com/static/login_bg.jpg'); */
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  /* animation: slide 4s linear infinite alternate; */
+}
+@keyframes slide {
+  0% {
+    background-position-x: left;
+  }
+  100% {
+    background-position-x: right;
+  }
+}
+.body {
+  box-sizing: border-box;
+  /* padding: 32rpx; */
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  /* transform: translateY(-50); */
+}
+.inputbox {
+  padding: 0 32rpx;
+}
+.input {
+  padding: 32rpx 0;
+
+  text-align: center;
+  color: #fff;
+}
+.focus {
+  border-bottom: 1px solid red;
+  /* background: ; */
+}
+page .weui-btn {
+  background: none;
+}
+.inactive {
+  border: 1px solid #1aad19;
+  border-radius: 10rpx;
+}
+.weui-btn-area .button-hover {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #179b16;
+  border: none;
+}
+.btn_contact {
+  margin: 0 32rpx;
+}
+/* .tip_shake { 
+ } */

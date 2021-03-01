@@ -1,0 +1,9 @@
+<view class="popup {{show?'':'hide'}}" >
+  <view class="mask" bind:tap="close"></view>
+  <view class="body">
+    <view class="title">提示</view>
+    <icon type="warn" size="48" ></icon>
+    <view class="txt">请绑定手机号</view>
+    <button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getphonenumber">好的</button>
+  </view>
+</view>

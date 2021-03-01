@@ -1,0 +1,23 @@
+.weui-mask.weui-mask_hidden {
+  opacity: 0;
+  transform: scale3d(1, 1, 0);
+}
+
+.weui-mask {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  transition: all 0.3s;
+  z-index: 5003;
+}
+
+.topBorder {
+  background-color: #fff;
+  border-top-left-radius: 48rpx;
+  border-top-right-radius: 48rpx;
+  z-index: 5003;
+}
+
+.weui-actionsheet__action {
+  border-top: 8px solid #eae7e8;
+  margin-top: 0;
+}

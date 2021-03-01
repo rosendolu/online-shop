@@ -1,0 +1,10 @@
+node_modules/
+miniprogram_npm/
+project.config
+*.zip
+*.rar
+.git_vice
+.tmp/
+png.sh
+project.config.json
+buildwxss.js

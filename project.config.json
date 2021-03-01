@@ -1,0 +1,176 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.1",
+  "appid": "wx431b4cb3deb35370",
+  "projectname": "857",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/home/auth/index",
+          "pathName": "pages/home/auth/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shopping-cart/pay/index",
+          "pathName": "pages/shopping-cart/pay/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my/index/index",
+          "pathName": "pages/my/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my/widthdraw/index",
+          "pathName": "pages/my/widthdraw/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shopping-cart/pay/index",
+          "pathName": "pages/shopping-cart/pay/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "pages/my/biometric-authentication/index",
+          "pathName": "pages/my/biometric-authentication/index",
+          "query": "pages/my/biometric-authentication/index",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/login/index",
+          "pathName": "pages/home/login/index",
+          "query": "pages/my/biometric-authentication/index",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/sort/index/index",
+          "pathName": "pages/sort/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shopping-cart/pay/index",
+          "pathName": "pages/shopping-cart/pay/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my/index/index",
+          "pathName": "pages/my/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my/balance/index",
+          "pathName": "pages/my/balance/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/login/index",
+          "pathName": "pages/home/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/login/index",
+          "pathName": "pages/home/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/sort/index/index",
+          "pathName": "pages/sort/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my/order/index",
+          "pathName": "pages/my/order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shopping-cart/pay/index",
+          "pathName": "pages/shopping-cart/pay/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

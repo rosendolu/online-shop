@@ -1,0 +1,11 @@
+<!-- 每个tab-bar 是不同的实列，须在tab也中单独设置选中状态 参考 index/index.js 文件 -->
+<!-- <wxs src="../utils/filter.wxs" module="filter" ></wxs> -->
+<view class="tab_bar {{show?'show':'hide'}}">
+	<view wx:for="{{list}}" wx:key="pagePath" class="tab_bar_item"  data-index="{{index}}" bindtap="switchTab">
+		<view class="item_text">{{item.text}}</view>
+    <view wx:if="{{index === selected}}" class="line"></view>
+    <view wx:if="{{ item.badge &&badge }}" class="red_dot_box">
+      <badge content="{{badge}}"></badge>
+    </view>
+	</view>
+</view>

@@ -1,0 +1,146 @@
+page {
+  background: #f2f2f2;
+  padding-bottom: 64rpx;
+}
+.row {
+  border-radius: 16rpx;
+}
+.order {
+  font-size: 28rpx;
+  color: #333;
+  background: #fff;
+  padding: 16rpx 32rpx;
+  margin-top: 16rpx;
+}
+.order .item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  line-height: 2;
+}
+.title {
+  line-height: 2;
+  font-size: 32rpx;
+}
+.addr .weui-cell__ft {
+  text-align: left;
+}
+.list .item {
+  padding: 16rpx;
+  background: #fff;
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+}
+.order .item .txt {
+  color: rgba(0, 0, 0, 0.5);
+}
+.list .poster {
+  width: 166rpx;
+  height: 166rpx;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+  background: rgba(153, 153, 153, 0.644);
+}
+.list .right {
+  flex: 1;
+  padding-left: 16rpx;
+}
+.list .right .title {
+  font-size: 36rpx;
+  color: #333;
+  text-align: left;
+  overflow: hidden;
+}
+.list .right .price {
+  font-size: 32rpx;
+  /* padding: 16rpx 0; */
+  color: #fd593b;
+  display: flex;
+  justify-content: space-between;
+}
+.selector {
+  color: #333;
+}
+.selector .addr_bar {
+  color: #000;
+}
+.el .center {
+  width: 300rpx;
+  overflow: hidden;
+}
+.el .right {
+  flex: 1;
+}
+.el {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 32rpx;
+  font-size: 28rpx;
+  color: #333;
+  background: #fff;
+  margin-top: 16rpx;
+}
+.selector:active {
+  background: var(--btn_bg_hover);
+}
+.info {
+  color: #000;
+}
+.info .info_icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 12rpx;
+  margin-right: 4rpx;
+}
+
+.h100 {
+  height: 100rpx;
+}
+
+/* color: rgba(0, 0, 0, 0.1); */
+/* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+.weui-cell__ft {
+  overflow: hidden;
+}
+.weui-cell .weui-cell__ft_in-access {
+  padding-right: 0;
+}
+/* .addr .weui-cell {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+} */
+.tip {
+  outline: 1px solid red;
+}
+.top {
+  text-align: center;
+  padding: 32rpx;
+}
+.top .txt {
+  line-height: 2;
+}
+.btn_contact {
+  margin: 32rpx;
+}
+.sendinfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.send .title {
+  line-height: 3;
+}
+.send {
+  margin-top: 16rpx;
+  font-size: 32rpx;
+  line-height: 2;
+  background: #fff;
+  padding: 32rpx;
+}
+.send .avatar {
+  width: 66rpx;
+  height: 66rpx;
+  border-radius: 50%;
+  margin-right: 64rpx;
+}

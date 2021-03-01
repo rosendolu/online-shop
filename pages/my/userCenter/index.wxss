@@ -1,0 +1,26 @@
+page {
+  padding: 0 16rpx;
+}
+.weui-cells__group .weui-cells:after,
+.weui-cells:before {
+  content: none;
+}
+.weui-cell {
+  padding: 32rpx 16rpx;
+}
+.weui-input {
+  padding-left: 16rpx;
+}
+.weui-btn {
+  margin-top: 32rpx;
+}
+.weui-cell .weui-cell__ft {
+  padding-left: 0;
+}
+.weui-vcode-btn,
+.weui-vcode-img {
+  height: auto;
+}
+.weui-vcode-btn {
+  line-height: 1;
+}

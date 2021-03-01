@@ -1,0 +1,39 @@
+<wenavigation title='商品详情'></wenavigation>
+<swiper  class="swiper" indicator-dots="{{true}}" indicator-active-color="#fff" autoplay="{{true}}" circular="{{true}}"  duration="{{300}}" >
+  <block wx:for="{{bannerList}}" wx:key="id">
+    <swiper-item class="swiper_item" >
+        <vanimage bind:click="clickBanner" data-index='{{index}}' use-loading-slot lazy-load fit="cover" width="100%" lazy-load height="100%" src="{{item.src}}">
+          <vanloading slot="loading" type="spinner" size="20" vertical />
+        </vanimage>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="body">
+  <view class="">
+    <text space="ensp" class="price_current">¥<text style="font-size:40rpx">{{goods.price}}</text> </text>
+    <text wx:if="{{goods.price_origin -0}}" space="ensp" class="price_original"> ¥{{goods.price_origin}} </text>
+  </view>
+  <view class="title overflow-word-line2">{{goods.title}}</view>
+  <view class="intro  overflow-word-line2">{{goods.intro}}</view>
+</view>
+<mp-cells title='选择商品规格,数量'  bind:tap="tapCell" >
+  <mp-cell value="规格" link hover data-fn='selectSku' footer="{{sku?sku:'请选择'}}">
+  </mp-cell>
+  <!-- <mp-cell value="数量" link data-fn='slectNum' hover bind:tap="tapCell" footer="{{num ?num+'件':'请选择'}}">
+  </mp-cell> -->
+</mp-cells>
+<view class="blank"></view>
+<van-goods-action>
+  <view class="contact">
+    <van-goods-action-icon icon="chat-o" text="客服" />
+    <button class="btn_contact" open-type="contact"></button>
+  </view>
+  <van-goods-action-icon icon="cart-o" dot='{{showDot}}' text="购物车" bind:click="onClickIcon" />
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bind:click="addToShoppingCart"
+  />
+  <van-goods-action-button text="立即购买" bind:click="buyNow" />
+</van-goods-action>
+<select-goods bind:change='skuChange' class="goods" info="{{goods}}" ></select-goods>

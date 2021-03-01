@@ -1,0 +1,27 @@
+<wxs src="../../utils/filter.wxs" module="filter"></wxs>
+<view class="card" bind:tap="tap" >
+  <!-- <image class="poster" lazy-load="{{true}}" mode="aspectFill" src="{{filter.ossImgCompress(item.imgs[0])}}" /> -->
+  <view class="poster" data-event='detail'>
+    <vanimage   data-event='detail'  use-loading-slot lazy-load fit="cover" width="100%" lazy-load height="100%" src="{{filter.ossImgCompress(item.imgs[0])}}">
+      <vanloading slot="loading" type="spinner" size="20" vertical />
+    </vanimage>
+  </view>
+  <view class="right">
+    <view class="text overflow-word-line2">{{item.title}}</view>
+    <view class="tagbox">
+      <block wx:for="{{item.taglist}}" wx:key="id">
+        <view class="item">
+          <van-tag plain type="danger">{{item.name}}</van-tag>
+        </view>
+      </block>
+    </view>
+    <view class="btn_box">
+      <!-- <view class="btn_pay" data-event='buy'>立即抢购</view> -->
+      <view class="price">¥<text style="font-size:32rpx">{{item.price}}</text><text wx:if="{{item.price_origin -0}}" space="ensp" class="price_origin">¥{{item.price_origin}}</text></view>
+      <view class="btn_pay" data-event='add'>
+        <vanicon data-event='add' name="add" size='32rpx'  color="{{item.total?'#fa5151':'#ececec'}}" />
+        <!-- <vanicon name="shopping-cart" size='32rpx' color="#ee0a24" data-event='add'/> -->
+      </view>
+    </view>
+  </view>
+</view>

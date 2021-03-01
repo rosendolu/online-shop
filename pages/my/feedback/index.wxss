@@ -1,0 +1,22 @@
+.body {
+  padding: 16rpx;
+}
+.input_box {
+  position: relative;
+}
+.input_box .len {
+  position: absolute;
+  right: 32rpx;
+  bottom: 16rpx;
+  color: gray;
+}
+.input {
+  background: var(--page_bg_gray);
+  min-height: 366rpx;
+  width: 100%;
+  line-height: 1.5;
+  padding: 32rpx 16rpx;
+}
+.button {
+  margin-top: 32rpx;
+}

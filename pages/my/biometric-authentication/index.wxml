@@ -1,0 +1,18 @@
+<wenavigation title="认证"></wenavigation>
+<!-- <van-tabs active="{{active}}" bind:change="tabChange">
+  <van-tab title="新订单" name="0">内容 1</van-tab>
+  <van-tab title="已接单" name="1">内容 2</van-tab>
+  <van-tab title="代发货" name="2">内容 3</van-tab>
+  <van-tab title="已完成" name="3">内容 3</van-tab>
+  <van-tab title="全部" name="4">内容 4</van-tab>
+</van-tabs> -->
+
+<button  type="primary" bindtap="checkIsFingerPrint" >检测是否可以指纹识别</button>
+<button  type="primary" bindtap="checkIsFacial">检测是否可以人脸识别</button>
+<button  type="primary" bindtap="HaveFingerPrint"> 该设备是否录入指纹</button>
+<button  type="primary" bindtap="FingerPrint">识别指纹</button>
+<button  type="primary" bindtap="facilPrint">识别指纹</button>
+ 
+<button  type="primary" bindtap="editVideo">编辑视频</button>
+
+

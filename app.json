@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/home/auth/index",
+    "pages/home/index/index",
+    "pages/home/login/index",
+    "pages/my/index/index",
+    "pages/shopping-cart/index/index",
+    "pages/sort/index/index",
+    "pages/home/search/index",
+    "pages/my/userCenter/index",
+    "pages/my/feedback/index",
+    "pages/my/order/index",
+    "pages/home/goods/index",
+    "pages/shopping-cart/pay/index",
+    "pages/my/balance/index",
+    "pages/my/order-send/index",
+    "pages/my/order-list/index",
+    "pages/my/widthdraw/index",
+    "pages/my/biometric-authentication/index",
+    "pages/shopping-cart/paySuccess/index",
+    "pages/webview/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#B7B7B7",
+    "selectedColor": "#3D3C3C",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/sort/index/index",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/shopping-cart/index/index",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/index/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {
+    "weicon": "/components/icon/icon",
+    "wenavigation": "/components/navigation/index",
+    "vanimage": "@vant/weapp/image/index",
+    "vanicon": "@vant/weapp/icon/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "vanloading": "@vant/weapp/loading/index"
+  },
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.3.16",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
+}
